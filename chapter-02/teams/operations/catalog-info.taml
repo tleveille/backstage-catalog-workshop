@@ -1,0 +1,51 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: operations
+  title: operations teams
+spec:
+  type: organization
+  parent: acmecorp
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: op-dba
+  title: dba
+spec:
+  type: organization
+  parent: operations
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: op-sys
+  title: sys
+spec:
+  type: organization
+  parent: operations
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: george.clooney
+spec:
+  profile:
+    displayName: George Clooney
+    email: george.clooney@acme.corp
+    picture: https://m.media-amazon.com/images/M/MV5BMjEyMTEyOTQ0MV5BMl5BanBnXkFtZTcwNzU3NTMzNw@@._V1_UY317_CR9,0,214,317_AL_.jpg
+  memberOf: [op-dba]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: cath.zeta.jones
+spec:
+  profile:
+    displayName: Catherine Zeta-Jones
+    email: catherine.zeta-jones@acme.corp
+    picture: https://m.media-amazon.com/images/M/MV5BZGE4MzUwMTYtYTFmNi00ZTRhLThjNDEtY2FlMTgyZmVmYTQwXkEyXkFqcGdeQXVyODczMzQ3NjY@._V1_UY317_CR81,0,214,317_AL_.jpg
+  memberOf: [op-sys]

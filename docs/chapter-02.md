@@ -257,21 +257,21 @@ Our Domain will comprise the entire webshop. We can separate the Account, Invent
 
 'skinparam linetype ortho
 
-Package WebShop {
+Package webShop {
   Mobile(MobileApp, "Mobile App", "Component")
-  Package Account {
+  Package account {
     LambdaLambdaFunction(Accountsvc, "Account Service", "Component")
     GenericDatabase(AccountDB, "Account DB", "Resource")
   }
-  Package Inventory {
+  Package inventory {
     LambdaLambdaFunction(Inventorysvc, "Inventory Service", "Component")
     GenericDatabase(InventoryDB, "Inventory DB", "Resource")
   }
-  Package Sale {
+  Package sale {
     ECSContainer1(Salesvc, "Sale Service", "Component")
     GenericDatabase(SaleDB, "Sale DB", "Resource")
   }
-  Package Shipping {
+  Package shipping {
     LambdaLambdaFunction(Shippingsvc, "Shipping Service", "Component")
     GenericDatabase(ShippingDB, "Shipping DB", "Resource")
   }
@@ -317,7 +317,7 @@ kind: Domain
 metadata:
   name: webshop
 spec:
-  owner: dev-team
+  owner: dev
 ```
 
 ## System example ##
@@ -326,7 +326,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: mobile-app
+  name: mobile
 spec:
   owner: mobile
 ```
