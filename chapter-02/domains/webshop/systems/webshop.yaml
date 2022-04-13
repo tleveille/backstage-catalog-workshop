@@ -14,6 +14,7 @@ metadata:
 spec:
   type: website
   owner: frontend
+  lifecycle: production
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -23,6 +24,7 @@ metadata:
 spec:
   owner: mobile
   type: app
+  lifecycle: experimental
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -32,4 +34,4 @@ metadata:
 spec:
   owner: mobile
   type: app
-
+  lifecycle: production

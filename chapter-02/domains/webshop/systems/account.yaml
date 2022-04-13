@@ -13,6 +13,7 @@ metadata:
 spec:
   type: service
   owner: backend
+  lifecycle: production
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
