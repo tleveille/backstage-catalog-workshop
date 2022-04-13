@@ -1,15 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: account
+  name: acme.webshop.account
+  title: ACME Shop account
 spec:
   owner: backend
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: account.service
-  title: account service
+  name: acme.webshop.account.service
+  title: ACME Shop account service
 spec:
   type: service
   owner: backend
@@ -18,8 +19,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: account.db
-  title: account service
+  name: acme.webshop.account.db
+  title: ACME Shop account database
 spec:
   owner: backend
   type: database
