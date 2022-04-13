@@ -1,15 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: webshop
+  name: acme.webshop
+  title: ACME Shop
 spec:
   owner: dev
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: web.frontend
-  title: web frontend
+  name: acme.webshop.frontend
+  title: ACME Shop Web frontend
 spec:
   type: website
   owner: frontend
@@ -17,15 +18,18 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: android.app
-  title: Mobile android app
+  name: acme.webshop.android.app
+  title: ACME Shop android app
 spec:
   owner: mobile
+  type: app
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ios.app
-  title: Mobile iOS app
+  name: acme.webshop.ios.app
+  title: ACME Shop iOS app
 spec:
   owner: mobile
+  type: app
+

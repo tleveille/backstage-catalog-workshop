@@ -21,3 +21,4 @@ metadata:
   title: account service
 spec:
   owner: backend
+  type: database

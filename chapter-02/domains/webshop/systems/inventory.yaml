@@ -1,15 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: inventory
+  name: acme.webshop.inventory
+  title: ACME Shop inventory
 spec:
   owner: backend
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: inventory.service
-  title: inventory service
+  name: acme.webshop.inventory.service
+  title: ACME Shop inventory service
 spec:
   type: service
   owner: backend
@@ -17,7 +18,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: inventory.db
-  title: inventory database
+  name: acme.webshop.inventory.db
+  title: ACME Shop inventory database
 spec:
   owner: backend
+  type: database

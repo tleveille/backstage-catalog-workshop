@@ -1,15 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: shipping
+  name: acme.webshop.shipping
+  title: ACME Shop shipping
 spec:
   owner: backend
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: shipping.service
-  title: shipping service
+  name: acme.webshop.shipping.service
+  title: ACME Shop shipping service
 spec:
   type: service
   owner: backend
@@ -17,7 +18,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: shipping.db
-  title: shipping service
+  name: acme.webshop.shipping.db
+  title: ACME Shop shipping database
 spec:
   owner: backend
+  type: database
