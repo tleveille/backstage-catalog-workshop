@@ -11,8 +11,8 @@ metadata:
   name: systems
 spec:
   targets:
-    - ./systems/webshop.yaml
-    - ./systems/account.yaml
-    - ./systems/inventory.yaml
-    - ./systems/sale.yaml
-    - ./systems/shipping.yaml
+    - ../systems/webshop.yaml
+    - ../systems/account.yaml
+    - ../systems/inventory.yaml
+    - ../systems/sale.yaml
+    - ../systems/shipping.yaml
