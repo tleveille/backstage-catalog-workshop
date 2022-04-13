@@ -4,7 +4,7 @@ metadata:
   name: operations
   title: operations teams
 spec:
-  type: organization
+  type: business-unit
   parent: acmecorp
   children: []
 ---
@@ -14,7 +14,7 @@ metadata:
   name: op-dba
   title: dba
 spec:
-  type: organization
+  type: team
   parent: operations
   children: []
 ---
@@ -24,7 +24,7 @@ metadata:
   name: op-sys
   title: sys
 spec:
-  type: organization
+  type: team
   parent: operations
   children: []
 ---

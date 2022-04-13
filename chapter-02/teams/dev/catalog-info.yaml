@@ -5,7 +5,7 @@ metadata:
   title: Development teams
 
 spec:
-  type: organization
+  type: business-unit
   parent: acmecorp
   children: []
 ---
@@ -15,7 +15,7 @@ metadata:
   name: mobile
   title: Development teams
 spec:
-  type: organization
+  type: team
   parent: dev
   children: []
 ---
@@ -25,7 +25,7 @@ metadata:
   name: frontend
   title: Development teams
 spec:
-  type: organization
+  type: team
   parent: dev
   children: []
 ---
@@ -35,7 +35,7 @@ metadata:
   name: backend
   title: Development teams
 spec:
-  type: organization
+  type: team
   parent: dev
   children: []
 ---
