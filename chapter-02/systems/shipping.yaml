@@ -4,3 +4,20 @@ metadata:
   name: shipping
 spec:
   owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: shipping.service
+  title: shipping service
+spec:
+  type: service
+  owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Ressource
+metadata:
+  name: shipping.db
+  title: shipping service
+spec:
+  owner: backend

@@ -214,7 +214,7 @@ metadata:
   name: Accountsvc
   title: Account Service
 spec:
-  type: lambda-function
+  type: service
   owner: backend
 ```
 

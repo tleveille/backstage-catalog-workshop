@@ -4,3 +4,20 @@ metadata:
   name: sale
 spec:
   owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sale.service
+  title: sale service
+spec:
+  type: service
+  owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Ressource
+metadata:
+  name: sale.db
+  title: sale service
+spec:
+  owner: backend

@@ -4,3 +4,20 @@ metadata:
   name: inventory
 spec:
   owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inventory.service
+  title: inventory service
+spec:
+  type: service
+  owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Ressource
+metadata:
+  name: inventory.db
+  title: inventory database
+spec:
+  owner: backend

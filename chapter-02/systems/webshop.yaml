@@ -4,3 +4,28 @@ metadata:
   name: webshop
 spec:
   owner: dev
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web.frontend
+  title: web frontend
+spec:
+  type: website
+  owner: frontend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: android.app
+  title: Mobile android app
+spec:
+  owner: mobile
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ios.app
+  title: Mobile iOS app
+spec:
+  owner: mobile
