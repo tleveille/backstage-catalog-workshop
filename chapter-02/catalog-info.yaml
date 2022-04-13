@@ -16,4 +16,4 @@ spec:
   targets:
     - ./teams/dev/catalog-info.yaml
     - ./teams/operations/catalog-info.yaml
-    - ./domains/catalog-info.yaml
+    - ./domains/webshop/catalog-info.yaml
