@@ -15,7 +15,7 @@ spec:
   owner: backend
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Ressource
+kind: Resource
 metadata:
   name: account.db
   title: account service
