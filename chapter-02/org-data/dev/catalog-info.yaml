@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: dev
-  title: Development teams
+  title: Development
 
 spec:
   type: business-unit
@@ -12,8 +12,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: mobile
-  title: Development teams
+  name: dev.mobile
+  title: Dev Mobile Team
 spec:
   type: team
   parent: dev
@@ -22,8 +22,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: frontend
-  title: Development teams
+  name: dev.frontend
+  title: Dev Frontend Team
 spec:
   type: team
   parent: dev
@@ -32,8 +32,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: backend
-  title: Development teams
+  name: dev.backend
+  title: Dev Backend Team
 spec:
   type: team
   parent: dev
@@ -48,7 +48,7 @@ spec:
     displayName: Brad Pitt
     email: brad.pitt@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg
-  memberOf: [mobile]
+  memberOf: [dev.mobile]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -59,7 +59,7 @@ spec:
     displayName: Ed Kross
     email: ed.kross@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg
-  memberOf: [backend]
+  memberOf: [dev.backend]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -70,7 +70,7 @@ spec:
     displayName: Julia Roberts
     email: julia.roberts@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BMTQzNjU3MDczN15BMl5BanBnXkFtZTYwNzY2Njc4._V1_UX214_CR0,0,214,317_AL_.jpg
-  memberOf: [frontend]
+  memberOf: [dev.frontend]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -81,4 +81,4 @@ spec:
     displayName: Don Tiffany
     email: don.tiffany@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BMTg5ODk2MDM1Ml5BMl5BanBnXkFtZTcwNjQ1OTkyMQ@@._V1_UY317_CR16,0,214,317_AL_.jpg
-  memberOf: [backend]
+  memberOf: [dev.backend]

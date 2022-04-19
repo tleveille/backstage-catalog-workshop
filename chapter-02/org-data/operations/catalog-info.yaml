@@ -11,7 +11,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: op-dba
+  name: op.dba
   title: dba
 spec:
   type: team
@@ -21,7 +21,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: op-sys
+  name: op.sys
   title: sys
 spec:
   type: team
@@ -37,7 +37,7 @@ spec:
     displayName: George Clooney
     email: george.clooney@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BMjEyMTEyOTQ0MV5BMl5BanBnXkFtZTcwNzU3NTMzNw@@._V1_UY317_CR9,0,214,317_AL_.jpg
-  memberOf: [op-dba]
+  memberOf: [op.dba]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -48,4 +48,4 @@ spec:
     displayName: Catherine Zeta-Jones
     email: catherine.zeta-jones@acme.corp
     picture: https://m.media-amazon.com/images/M/MV5BZGE4MzUwMTYtYTFmNi00ZTRhLThjNDEtY2FlMTgyZmVmYTQwXkEyXkFqcGdeQXVyODczMzQ3NjY@._V1_UY317_CR81,0,214,317_AL_.jpg
-  memberOf: [op-sys]
+  memberOf: [op.sys]

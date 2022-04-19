@@ -4,6 +4,7 @@
 
 Our example company Acme Corp
 
+<!---
 <div hidden>
 ```
 @startuml ch2-organigram
@@ -41,38 +42,15 @@ opdba -[hidden]r- opsys
 @enduml
 ```
 </div>
+--->
 
 ![architecture example](ch2-organigram.svg)
 
-## Organization skeleton ##
-
-We create a skeleton for our organization. Ideally the group/users would come from ingestion of the corporate identity management software. Note the Location Kind to target different catalog files. We point for individual catalog files for each team as well as a domain specific file that we will use as a basis for the rest of our workshop. We could technically fill the (mandatory) children field of our organization but it is easier to use the parent field of the sub groups.
-
-```
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: acmecorp
-  title: ACME corp
-spec:
-  type: organization
-  children: []
----
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: teams
-spec:
-  targets:
-    - ./teams/dev/catalog-info.yaml
-    - ./teams/operations/catalog-info.yaml
-    - ./domains/catalog-info.yaml
-```
-
 ## Our example architecture ##
 
-Here is an examples of the architecture of our webshop.
+Here is an example of the architecture of a webshop.
 
+<!---
 <div hidden>
 ```
 @startuml ch2-architecture-diagram
@@ -127,15 +105,58 @@ Salesvc -- SaleDB
 @enduml
 ```
 </div>
+--->
 
 ![architecture example](ch2-architecture-diagram.svg)
 
+## Our catalog repo ##
+
+Let's create the repository of our catalog.
+
+At the root, we want a `catalog-info.yaml` file that will serve to host the main _domain_ as well as a _location_ kind to point to other catalog yaml files.
+
+We will start with the following subdirectories and catalog file structure:
+```
+./org-data/organization.yaml # will store main organization group as well as location to target the other groups
+./org-data/<business-unit-names>/<team-name>.yaml #will store group and user catalog kinds
+./products/<product-name>/<system-name>.yaml #will store system, components and resources kinds
+```
+
+Note: in real life example we would point to a catalog file embedded in each individual product or resource repo.
+
+## Organization skeleton ##
+
+The root catalog file of our organization. We could technically fill the (mandatory) children field of our organization but it is easier to use the parent field of the sub groups. Note the extensive use of wildcards to ease up our process but in real life example you would point to catalog files of your respective repos.
+
+```
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: acme
+  title: ACME corp
+spec:
+  type: organization
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: teams
+spec:
+  targets:
+    - ./org-data/*/catalog-info.yaml
+    - ./products/*/*.yaml
+```
+
+Then we can create our other groups in ./org-data/dev/catalog-info.yaml and ./teams/operations/catalog-info.yaml, using `type: business unit` for the operations and dev and `type: team` for dev and operationnal teams. Don't forget to fill the parent field. We can also create user and add them as member of your teams, using the right column of the [descriptor format page](https://backstage.io/docs/features/software-catalog/descriptor-format) to guide us with the required fields. We will build the domain later after reviewing the architecture of our example project.
+
 ## Identifying components and resources ##
 
-End users and Browser are not software entities of our webshop product, we will ignore them in the next parts.
+The Webshop as a whole is a system. End users and Browser are not software entities of our webshop product, we will ignore them in the next parts.
 DB and amazon api gateway are resources, as the code is not managed by a development team.
 All others entities are components.
 
+<!---
 <div hidden>
 ```
 @startuml ch2-components-resources
@@ -189,6 +210,7 @@ Salesvc -- SaleDB
 @enduml
 ```
 </div>
+--->
 
 ![architecture example](ch2-components-resources.svg)
  
@@ -236,8 +258,9 @@ spec:
 
 ## System and Domain ##
 
-Our Domain will comprise the entire webshop. We can separate the Account, Inventory, Sale and Shipping logical functions as separate systems.
+Our Domain will comprise the entire webshop as it is our project. But we should also use it as a systemas it comprise different entities such as the web frontend, the API GW and Mobile App. We can separate the Account, Inventory, Sale and Shipping logical functions as separate systems.
 
+<!---
 <div hidden>
 ```
 @startuml ch2-system-domain
@@ -289,7 +312,6 @@ InventoryDB -[hidden]r- SaleDB
 SaleDB -[hidden]r- ShippingDB
 
 MobileApp -- APIgw
-Browser --- WebApp
 APIgw -- Accountsvc
 WebApp -- Accountsvc
 APIgw -- Inventorysvc
@@ -306,7 +328,7 @@ Salesvc -- SaleDB
 @enduml
 ```
 </div>
-
+--->
 ![architecture example](ch2-system-domain.svg)
 
 ## Domain example ##
