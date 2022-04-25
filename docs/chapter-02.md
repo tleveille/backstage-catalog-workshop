@@ -353,3 +353,32 @@ spec:
   owner: mobile
 ```
 
+## Empty up on your local backstage instance ##
+
+Steps:
+- Push your created catalog to a repo accessible from your local computer.
+- got to your backstage instance directory, edit app-config.yaml and remove all github.com / backstage related locations
+- add Domain, User and Group to the catalog.rules.allow statement
+
+The end of your app-config.yaml file should look like this:
+```
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Domain, User, Group, Component, System, API, Resource, Location]
+```
+- restart the app (yarn dev)
+
+You should end up with an empty catalog.
+
+## Load your new catalog ##
+
+Now import your root catalog-info.yaml file using the [CREATE COMPONENT], then [REGISTER EXISTING COMPONENT] buttons in top right area and select your repository URL.
+
+Hit ANALYSE
+
+If you have no syntax error, it should show you a long list of entities to be added to the catalog. If you have some error, read the text to understand what happened and modify your catalog files in the repo accordingly and repeat those steps, then hit IMPORT.
+
+

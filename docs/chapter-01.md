@@ -97,4 +97,30 @@ spec:
 | Domain     | A Domain is a collection of system. It can either identify individual products or if the backstage instance is dedicated to a specific product it can group systems that share the same business purpose.| [kind-domain](https://backstage.io/docs/features/software-catalog/descriptor-format#domain) |
 | Location   | A location is a reference to other catalog files| [kind-domain](https://backstage.io/docs/features/software-catalog/descriptor-format#kind-location) |
 
+## How to spin up your own dev instance ##
 
+```
+npx @backstage/create-app
+[...]
+Ok to proceed? (y) y
+[...]
+? Enter a name for the app [required] backstage
+? Select database for the backend [required] SQLite
+[...]
+
+ Building the app:
+  executing     yarn install ✔ 
+  executing     yarn tsc ✔ 
+
+🥇  Successfully created backstage
+
+
+ All set! Now you might want to:
+  Run the app: cd backstage && yarn dev
+  Set up the software catalog: https://backstage.io/docs/features/software-catalog/configuration
+  Add authentication: https://backstage.io/docs/auth/
+```
+
+A directory will be created with the same name as the chosen name for the app (it doesn't have to be backstage)
+
+To run it, follow the instruction above. A tab should open in your browser window showing the app and a catalog from backstage repository examples. Have a quick look at it.

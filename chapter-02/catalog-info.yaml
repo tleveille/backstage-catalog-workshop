@@ -15,4 +15,5 @@ metadata:
 spec:
   targets:
     - ./org-data/*/catalog-info.yaml
-    - ./products/*/*.yaml
+    - ./products/*/catalog-info.yaml
+    - ./products/*/systems/*.yaml
