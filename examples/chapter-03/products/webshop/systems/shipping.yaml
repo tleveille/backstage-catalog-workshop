@@ -41,4 +41,4 @@ spec:
   lifecycle: production
   owner: backend
   definition:
-    $json: https://raw.githubusercontent.com/tleveille/backstage-catalog-workshop/main/examples/swagger-example/swagger.json
+    $text: https://raw.githubusercontent.com/tleveille/backstage-catalog-workshop/main/examples/swagger-example/swagger.json
