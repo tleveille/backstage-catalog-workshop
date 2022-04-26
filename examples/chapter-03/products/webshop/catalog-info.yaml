@@ -4,3 +4,11 @@ metadata:
   name: webshop
 spec:
   owner: dev
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: products
+spec:
+  targets:
+    - ./*/*.yaml
