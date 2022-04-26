@@ -49,3 +49,7 @@ spec:
   type: app
   lifecycle: production
   consumesApi:
+    - acme.webshop.account.api
+    - acme.webshop.inventory.api
+    - acme.webshop.sale.api
+    - acme.webshop.shipping.api
