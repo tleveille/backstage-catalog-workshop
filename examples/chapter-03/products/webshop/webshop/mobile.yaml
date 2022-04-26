@@ -1,28 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: acme.webshop
-  title: ACME Shop
-spec:
-  owner: dev
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: acme.webshop.frontend
-  title: ACME Shop Web frontend
-spec:
-  system: acme.webshop
-  type: website
-  owner: frontend
-  lifecycle: production
-  consumesApi:
-    - acme.webshop.account.api
-    - acme.webshop.inventory.api
-    - acme.webshop.sale.api
-    - acme.webshop.shipping.api
----
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: acme.webshop.android.app
@@ -37,6 +13,12 @@ spec:
     - acme.webshop.inventory.api
     - acme.webshop.sale.api
     - acme.webshop.shipping.api
+  dependsOn:
+    - acme.webshop.account.service
+    - acme.webshop.inventory.service
+    - acme.webshop.sale.service
+    - acme.webshop.shipping.service
+    - acme.webshop.apigw
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -44,12 +26,17 @@ metadata:
   name: acme.webshop.ios.app
   title: ACME Shop iOS app
 spec:
-  system: acme.webshop
   owner: mobile
   type: app
   lifecycle: production
-  consumesApi:
+    consumesApi:
     - acme.webshop.account.api
     - acme.webshop.inventory.api
     - acme.webshop.sale.api
     - acme.webshop.shipping.api
+  dependsOn:
+    - acme.webshop.account.service
+    - acme.webshop.inventory.service
+    - acme.webshop.sale.service
+    - acme.webshop.shipping.service
+    - acme.webshop.apigw

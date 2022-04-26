@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.android.app
+  title: ACME Shop android app
+spec:
+  owner: mobile
+  type: app
+  lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.ios.app
+  title: ACME Shop iOS app
+spec:
+  owner: mobile
+  type: app
+  lifecycle: production

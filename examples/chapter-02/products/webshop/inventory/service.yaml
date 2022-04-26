@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.inventory.service
+  title: ACME Shop inventory service
+spec:
+  system: acme.webshop.inventory
+  type: service
+  owner: backend
+  lifecycle: production

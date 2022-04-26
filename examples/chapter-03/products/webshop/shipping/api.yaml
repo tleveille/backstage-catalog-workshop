@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: acme.webshop.shipping.api
+  description: Shipping API
+spec:
+  system: acme.webshop.shipping
+  type: openapi
+  lifecycle: production
+  owner: backend
+  definition:
+    $text: https://raw.githubusercontent.com/tleveille/backstage-catalog-workshop/main/examples/swagger-example/swagger.json

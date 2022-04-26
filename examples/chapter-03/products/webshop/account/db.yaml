@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.account.db
+  title: ACME Shop account database
+spec:
+  system: acme.webshop.account
+  owner: backend
+  type: database

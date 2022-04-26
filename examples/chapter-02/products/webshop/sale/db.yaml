@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.sale.db
+  title: ACME Shop sale database
+spec:
+  system: acme.webshop.sale
+  owner: backend
+  type: database

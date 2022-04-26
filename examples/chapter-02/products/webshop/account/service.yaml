@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.account.service
+  title: ACME Shop account service
+spec:
+  system: acme.webshop.account
+  type: service
+  owner: backend
+  lifecycle: production

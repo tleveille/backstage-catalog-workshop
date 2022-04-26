@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.shipping.db
+  title: ACME Shop shipping database
+spec:
+  system: acme.webshop.shipping
+  owner: backend
+  type: database

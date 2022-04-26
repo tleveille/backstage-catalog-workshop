@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: acme.webshop.inventory.api
+  description: Inventory API
+spec:
+  system: acme.webshop.inventory
+  type: openapi
+  lifecycle: production
+  owner: backend
+  definition:
+    $text: https://github.com/tleveille/backstage-catalog-workshop/blob/main/examples/swagger-example/swagger.json

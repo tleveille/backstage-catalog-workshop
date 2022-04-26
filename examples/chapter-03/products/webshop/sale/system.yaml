@@ -1,0 +1,7 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: acme.webshop.sale
+  title: ACME Shop sale
+spec:
+  owner: backend

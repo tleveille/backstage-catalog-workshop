@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.apigw
+  title: ACME Shop API Gateway
+spec:
+  system: acme.webshop
+  type: service
+  owner: dev 
+  lifecycle: production

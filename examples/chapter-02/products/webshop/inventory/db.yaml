@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.inventory.db
+  title: ACME Shop inventory database
+spec:
+  system: acme.webshop.inventory
+  owner: backend
+  type: database

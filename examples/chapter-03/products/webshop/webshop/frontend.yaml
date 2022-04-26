@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.frontend
+  title: ACME Shop Web frontend
+spec:
+  system: acme.webshop
+  type: website
+  owner: frontend
+  lifecycle: production
+  consumesApi:
+    - acme.webshop.account.api
+    - acme.webshop.inventory.api
+    - acme.webshop.sale.api
+    - acme.webshop.shipping.api
+  dependsOn:
+    - acme.webshop.account.service
+    - acme.webshop.inventory.service
+    - acme.webshop.sale.service
+    - acme.webshop.shipping.service
