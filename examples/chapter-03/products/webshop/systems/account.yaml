@@ -17,7 +17,8 @@ spec:
   owner: backend
   lifecycle: production
   providesApi: acme.webshop.account.api
-  dependsOn: acme.webshop.account.db
+  dependsOn:
+    - acme.webshop.account.db
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
