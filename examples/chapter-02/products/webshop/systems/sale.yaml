@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: acme.webshop.sale
+  title: ACME shop sale
+spec:
+  owner: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: acme.webshop.sale.service
+  title: ACME Shop sale service
+spec:
+  type: service
+  owner: backend
+  lifecycle: production
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.sale.db
+  title: ACME Shop sale database
+spec:
+  owner: backend
+  type: database

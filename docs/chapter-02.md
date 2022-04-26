@@ -117,6 +117,7 @@ At the root, we want a `catalog-info.yaml` file that will serve to host the main
 
 We will start with the following subdirectories and catalog file structure:
 ```
+./catalog-info.yaml 
 ./org-data/organization.yaml # will store main organization group as well as location to target the other groups
 ./org-data/<business-unit-names>/<team-name>.yaml #will store group and user catalog kinds
 ./products/<product-name>/<system-name>.yaml #will store system, components and resources kinds
@@ -376,6 +377,8 @@ You should end up with an empty catalog.
 ## Load your new catalog ##
 
 Now import your root catalog-info.yaml file using the [CREATE COMPONENT], then [REGISTER EXISTING COMPONENT] buttons in top right area and select your repository URL.
+
+![Catalog import](./assets/catalog-import.png)
 
 Hit ANALYSE
 

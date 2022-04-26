@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: acmecorp
+  title: ACME corp
+spec:
+  type: organization
+  parent: acme
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: teams
+spec:
+  targets:
+    - ./org-data/*/catalog-info.yaml
+    - ./products/*/catalog-info.yaml
+    - ./products/*/systems/*.yaml
