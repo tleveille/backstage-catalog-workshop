@@ -23,17 +23,6 @@ spec:
     - acme.webshop.shipping.api
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: acme.webshop.apigw
-  title: ACME Shop API Gateway
-spec:
-  system: acme.webshop
-  type: service
-  owner: dev 
-  lifecycle: production
----
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: acme.webshop.android.app
@@ -64,3 +53,14 @@ spec:
   consumesApi:
   dependsOn:
     - acme.webshop.apigw
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: acme.webshop.apigw
+  title: ACME Shop API Gateway
+spec:
+  system: acme.webshop
+  type: service
+  owner: dev 
+  lifecycle: production

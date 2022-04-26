@@ -167,5 +167,6 @@ spec:
     - acme.webshop.inventory.api
     - acme.webshop.sale.api
     - acme.webshop.shipping.api
-  dependsOn: acme.webshop.apigw
+  dependsOn:
+    - acme.webshop.apigw
 ```
