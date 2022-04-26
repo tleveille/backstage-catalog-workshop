@@ -40,4 +40,4 @@ spec:
   lifecycle: production
   owner: backend
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json
