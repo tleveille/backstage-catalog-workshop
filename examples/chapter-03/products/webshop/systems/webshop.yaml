@@ -63,4 +63,3 @@ spec:
   system: acme.webshop
   type: service
   owner: dev 
-  lifecycle: production
