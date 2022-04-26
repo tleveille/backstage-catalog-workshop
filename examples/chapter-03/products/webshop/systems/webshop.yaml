@@ -37,8 +37,6 @@ spec:
     - acme.webshop.inventory.api
     - acme.webshop.sale.api
     - acme.webshop.shipping.api
-  dependsOn:
-    - acme.webshop.apigw
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -51,5 +49,3 @@ spec:
   type: app
   lifecycle: production
   consumesApi:
-  dependsOn:
-    - acme.webshop.apigw
